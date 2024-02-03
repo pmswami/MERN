@@ -1,0 +1,7 @@
+MERN =>
+    M => MongoDB (Database)
+    E => Express (Backend)
+    R => React (Frontend)
+    N => Node.js (Backend)
+
+Using Backend provides protection to hide sensitive data from DB.
