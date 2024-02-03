@@ -1,2 +1,4 @@
 # MERN
-MERN Stack Credit: Net Ninja
+MERN Stack 
+
+Credit: Net Ninja
