@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import WorkoutForm from "../components/WorkoutForm";
 import WorkoutDetails from "../components/WorkoutDetails";
+import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 
 export default function Home() {
   //define state vars
-  const [workouts, setWorkouts] = useState(null);
+  // const [workouts, setWorkouts] = useState(null);
 
+  const { workouts, dispatch } = useWorkoutsContext();
+  console.log(workouts, dispatch);
   //runs only once after component is rendered.
   useEffect(() => {
     const fetchWorkouts = async () => {
@@ -14,7 +17,9 @@ export default function Home() {
       const json = await response.json();
       //   console.log(json);
       if (response.ok) {
-        setWorkouts(json);
+        // setWorkouts(json);
+        dispatch({ type: "SET_WORKOUTS", payload: json });
+        // console.log("tets");
       }
       //   console.log(workouts);
     };
