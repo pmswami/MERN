@@ -8,7 +8,7 @@ export default function Home() {
   // const [workouts, setWorkouts] = useState(null);
 
   const { workouts, dispatch } = useWorkoutsContext();
-  console.log(workouts, dispatch);
+  // console.log(workouts, dispatch);
   //runs only once after component is rendered.
   useEffect(() => {
     const fetchWorkouts = async () => {
