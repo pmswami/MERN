@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import WorkoutForm from "../components/WorkoutForm";
 import WorkoutDetails from "../components/WorkoutDetails";
 
 export default function Home() {
@@ -25,9 +26,11 @@ export default function Home() {
         {/* {workouts} */}
         {workouts &&
           workouts.map((workout) => (
+            // <WorkoutDetails/>
             <WorkoutDetails key={workout._id} workout={workout} />
           ))}
       </div>
+      <WorkoutForm />
     </div>
   );
 }

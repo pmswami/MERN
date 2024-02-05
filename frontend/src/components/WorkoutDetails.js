@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function WorkoutDetails({ workout }) {
-  console.log(workout);
+  // console.log(workout);
   return (
     <div className="workout-details">
       <h4>{workout.title}</h4>
