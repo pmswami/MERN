@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useSignup } from "../context/useSignup";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { signup, isLoading, error } = useSignup();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(email, password);
+    signup(email, password);
   };
   return (
     <form onSubmit={handleSubmit} className="signup">
@@ -25,7 +28,9 @@ export default function Signup() {
         onChange={(e) => setPassword(e.target.value)}
         value={password}
       />
-      <button>Sign Up</button>
+      <button disabled={isLoading}>Sign Up</button>
+
+      {error && <div className="error">{error}</div>}
     </form>
   );
 }
