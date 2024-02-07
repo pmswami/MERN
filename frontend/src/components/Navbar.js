@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useLogout } from "../context/useLogout";
 
 // export default function Navbar() {
 //   return (
@@ -14,6 +15,10 @@ import { Link } from "react-router-dom";
 // }
 
 const Navbar = () => {
+  const { logout } = useLogout();
+  const handleClick = () => {
+    logout();
+  };
   return (
     <header>
       <div className="container">
@@ -21,6 +26,9 @@ const Navbar = () => {
           <h1>Workout Buddy</h1>
         </Link>
         <nav>
+          <div>
+            <button onClick={handleClick}>Logout</button>
+          </div>
           <div>
             <Link to="/login">Login</Link>
             <Link to="/signup">Signup</Link>
