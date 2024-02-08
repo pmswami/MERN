@@ -46,6 +46,7 @@ import Careers, { careersLoader } from "./pages/careers/Careers";
 import CareerDetails, {
   careerDetailsLoader,
 } from "./pages/careers/CareerDetails";
+import CareersError from "./pages/careers/CareersError";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -63,7 +64,11 @@ const router = createBrowserRouter(
         {/* path of below route = "/help/contact" */}
         <Route path="contact" element={<Contact />} />
       </Route>
-      <Route path="careers" element={<CareersLayout />}>
+      <Route
+        path="careers"
+        element={<CareersLayout />}
+        errorElement={<CareersError />}
+      >
         {/* path of below route = "/help/faq" */}
         <Route index element={<Careers />} loader={careersLoader} />
         <Route
