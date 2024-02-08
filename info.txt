@@ -25,3 +25,8 @@ React-Router =>
 
 Loader Functions in React router =>
     These functions help us to load the component beforehand instead of loading them when they render. Normally we use useEffect hook for such cases.
+
+Route Parameters =>
+    Changeable section of router
+    Some components shown for every variation
+    
