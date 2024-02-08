@@ -30,24 +30,33 @@
 
 import {
   createBrowserRouter,
-  Routes,
   Route,
-  Link,
-  NavLink,
   createRoutesFromElements,
   RouterProvider,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import RootLayout from "./layouts/RootLayout";
+import Faq from "./pages/help/Faq";
+import Contact from "./pages/help/Contact";
+import HelpLayout from "./layouts/HelpLayout";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     // we can create route inside another route
-    <Route path="/" element={<RootLayout/>}>
+    <Route path="/" element={<RootLayout />}>
       {/* <Route path="/" element={<Home />} /> */}
+      {/* path of below route = "/" */}
       <Route index element={<Home />} />
-      <Route path="/about" element={<About />} />
+      {/* path of below route = "/about" */}
+      <Route path="about" element={<About />} />
+      {/* //path of below route = "/help" */}
+      <Route path="help" element={<HelpLayout />}>
+        {/* path of below route = "/help/faq" */}
+        <Route path="faq" element={<Faq />} />
+        {/* path of below route = "/help/contact" */}
+        <Route path="contact" element={<Contact />} />
+      </Route>
     </Route>
   )
 );
