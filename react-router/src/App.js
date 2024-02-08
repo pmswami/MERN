@@ -40,6 +40,7 @@ import RootLayout from "./layouts/RootLayout";
 import Faq from "./pages/help/Faq";
 import Contact from "./pages/help/Contact";
 import HelpLayout from "./layouts/HelpLayout";
+import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -57,6 +58,7 @@ const router = createBrowserRouter(
         {/* path of below route = "/help/contact" */}
         <Route path="contact" element={<Contact />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Route>
   )
 );
