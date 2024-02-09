@@ -17,12 +17,17 @@
     <div id="app"></div>
     <script type="text/babel">
       class App extends React.Component {
+        state = {
+          name: "Ryu",
+          age: 30,
+        };
         // componet must return one and only JSX
         render() {
           return (
             <div>
               <h2>Hey, Ninjas!</h2>
-              <p>{Math.random() * 10}</p>
+              <p>My Name is: {this.state.name}</p>
+              <p>My age is: {this.state.age}</p>
             </div>
           );
         }

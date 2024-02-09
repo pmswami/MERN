@@ -49,3 +49,10 @@ Components and Templates =>
     Components look like HTML templates (Actually JSX)
     They contain states(data or UI)
     They also contain JavaScript for functionality.
+
+Component State =>
+    JavaScript Object
+    Describes thye current state of teh component, data or UI
+    The state of the compoennt can be updated over time.
+        a model could close
+        the data we output could change.
