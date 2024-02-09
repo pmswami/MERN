@@ -30,3 +30,22 @@ Route Parameters =>
     Changeable section of router
     Some components shown for every variation
     
+What is React ? =>
+    JavaScript library created by Facebook
+    Also used ny Netflix and Instagram
+    Used to create JS-driven dynamic web apps
+    In that regard, can be compared to Angular and Vue.
+
+What is Redux ? =>
+    A layer on-top React
+    Helps with state management of our apps
+        data in the app 
+        UI state of the app
+    
+DOM => Document Object Model
+Whenever there are changes in Components then React compares the new component and old component and it updates the compoenents if there are changes.
+
+Components and Templates =>
+    Components look like HTML templates (Actually JSX)
+    They contain states(data or UI)
+    They also contain JavaScript for functionality.
