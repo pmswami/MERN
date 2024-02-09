@@ -21,13 +21,25 @@
           name: "Ryu",
           age: 30,
         };
-        // componet must return one and only JSX
+        handleClick(e) {
+          console.log(e.target);
+        }
+        handleMouseOver(e) {
+          console.log(e.target);
+        }
+        handleCopy(e) {
+          console.log("Try being original for once!");
+        }
+        // component must return one and only JSX
         render() {
           return (
             <div>
               <h2>Hey, Ninjas!</h2>
               <p>My Name is: {this.state.name}</p>
               <p>My age is: {this.state.age}</p>
+              <button onClick={this.handleClick}>Click Me!</button>
+              <button onMouseOver={this.handleMouseOver}>Hover Me!</button>
+              <p onCopy={this.handleCopy}>What we think, we become</p>
             </div>
           );
         }
