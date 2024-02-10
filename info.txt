@@ -56,3 +56,16 @@ Component State =>
     The state of the compoennt can be updated over time.
         a model could close
         the data we output could change.
+
+Create React App command =>
+    A command line tool to create React apps
+    Development Server
+    Use ES6 features which are not normally supported
+    Keep our code modular
+    Use build tools to create optimized code.
+
+Single Page Apps
+    React apps are typically SPAs
+    Only ever one HTML page served to the browser
+    React then controls what a user sees on that page.
+    
