@@ -21,15 +21,17 @@
           name: "Ryu",
           age: 30,
         };
-        handleClick(e) {
+        handleClick = (e) => {
+          this.setState({ name: "Yoshi", age: 25 });
+          // console.log(e.target);
+          console.log(this.state);
+        };
+        handleMouseOver = (e) => {
           console.log(e.target);
-        }
-        handleMouseOver(e) {
-          console.log(e.target);
-        }
-        handleCopy(e) {
+        };
+        handleCopy = (e) => {
           console.log("Try being original for once!");
-        }
+        };
         // component must return one and only JSX
         render() {
           return (
