@@ -27,7 +27,7 @@
 
 import React from "react";
 
-function Ninjas({ ninjas }) {
+function Ninjas({ ninjas, deleteNinja }) {
   // Method 1
   //   const { ninjas } = props;
   //   const ninjaList = ninjas.map((ninja) => {
@@ -64,6 +64,7 @@ function Ninjas({ ninjas }) {
             <div>Name: {ninja.name}</div>
             <div>Age: {ninja.age}</div>
             <div>Belt: {ninja.belt}</div>
+            <button onClick={() => deleteNinja(ninja.id)}>Delete Ninja</button>
           </div>
         ) : null;
       })}
