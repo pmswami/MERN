@@ -68,4 +68,17 @@ Single Page Apps
     React apps are typically SPAs
     Only ever one HTML page served to the browser
     React then controls what a user sees on that page.
-    
+
+Container Components vs UI Components =>
+    Container Components =>
+        Contain state
+        Contain lifecycle hooks
+        Not concerned with UI
+        Use Classes to create
+    UI Components =>
+        Dont contain state
+        Receive data from props
+        Only concerned with UI
+        Use Functions to create
+
+Container component can contain another container component inside it. (Nesting containers)
