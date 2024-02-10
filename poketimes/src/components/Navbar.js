@@ -1,7 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-function Navbar() {
+function Navbar(props) {
+  // console.log(props);
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
