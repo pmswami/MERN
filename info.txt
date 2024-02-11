@@ -87,3 +87,8 @@ Route Parameters =>
     Part of the URL that can change 
     Usually see them on URLs for individuals records
     
+React Redux =>
+    Central data store for all app data
+    Any component can access data from it
+    Makes state management easy.
+    
