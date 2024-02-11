@@ -82,3 +82,8 @@ Container Components vs UI Components =>
         Use Functions to create
 
 Container component can contain another container component inside it. (Nesting containers)
+
+Route Parameters =>
+    Part of the URL that can change 
+    Usually see them on URLs for individuals records
+    

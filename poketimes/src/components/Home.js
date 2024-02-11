@@ -19,6 +19,8 @@
 
 import React, { Component } from "react";
 import axios from "axios";
+import Pokeball from "../pokeball.png";
+import { Link } from "react-router-dom";
 
 export class Home extends Component {
   state = {
@@ -32,14 +34,24 @@ export class Home extends Component {
       console.log(this.state.posts);
     });
   }
+  handleClick(id) {
+    console.log(id);
+  }
   render() {
     const { posts } = this.state;
     const postsList = posts.length ? (
       posts.map((post) => {
         return (
-          <div className="post card" key={post.id}>
+          <div
+            className="post card"
+            key={post.id}
+            onClick={() => this.handleClick(post.id)}
+          >
             <div className="card-content">
-              <span className="card-title">{post.title}</span>
+              <img src={Pokeball} alt="A Pokeball" />
+              <Link>
+                <span className="card-title">{post.title}</span>
+              </Link>
               <p>{post.body}</p>
             </div>
           </div>
